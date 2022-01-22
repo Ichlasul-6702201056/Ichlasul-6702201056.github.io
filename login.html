@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {margin: 0; background-color: #e2e276;}
+        .form, table {
+            text-align: center;
+            margin: auto;
+            font-family: segoe ui;
+        }
+        .form {
+                background-color: #fcfc88;
+                margin: 15px;
+                padding: 15px 0;
+                border: 2px solid darkslategray;
+                box-shadow: 1px 2px darkslategray;
+            }
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 5px 0;
+        }
+        table tr, td { padding: 5px;}
+        #login {
+            padding: 5px;
+            width: 100%;
+            margin: 15px 0;
+            background-color: coral;
+            /* font-family: segoe ui; */
+        }
+        .signup {
+            border-top: 1px solid black;
+            font: 12px monospace;
+        }
+
+
+        /* Laptop */
+        @media only screen and (min-width: 769px) {
+            .form {
+                margin: 16px auto;
+                max-width: 50%;
+                border: 5px solid pink;
+                background-color: #fcfc88;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <form action="login.php" method="POST">
+        <table>
+            <tr>
+                <td colspan="2"><h2>Log in</h2></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td> 
+            </tr>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" id="username" name="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="login" type="submit" name="login" value="Login"></td>
+            </tr>
+            <tr>
+                <td class="signup" colspan="2">Belum punya akun? <a href="signup.php">Sign Up</a></td>
+            </tr>
+        </table>
+    
+        
+
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {margin: 0; background-color: #e2e276;}
+        .form, table {
+            text-align: center;
+            font-family: segoe ui;
+        }
+        table { margin: auto;}
+        .form {
+                background-color: #fcfc88;
+                margin: 16px auto;
+                padding: 15px 0;
+                border: 2px solid darkslategray;
+                box-shadow: 1px 2px darkslategray;
+            }
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 5px 0;
+        }
+        table tr, td { padding: 5px;}
+        #login {
+            padding: 5px;
+            width: 100%;
+            margin: 15px 0;
+            background-color: coral;
+            /* font-family: segoe ui; */
+        }
+        .signup {
+            border-top: 1px solid black;
+            font: 12px monospace;
+        }
+
+
+        /* Laptop */
+        @media only screen and (min-width: 769px) {
+            .form {
+                margin: 16px auto;
+                max-width: 50%;
+                border: 5px solid pink;
+                background-color: #fcfc88;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <form action="signup.php" method="POST" name="form">
+        <table>
+            <tr>
+                <td colspan="2"><h2>Sign Up</h2></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="nama">Nama</label></td>
+                <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="telp">No. Telp</label></td>
+                <td><input type="tel" id="telp" name="telp" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr>
+                <td><label for="pas sword">Password</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="password2">Password</label></td>
+                <td><input type="password" id="password2" name="password2" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="login" type="submit" name="submit" value="Sign Up" onclick="check()"></td>
+            </tr>
+            <tr>
+                <td class="signup" colspan="2">Sudah punya akun? <a href="login.html">Log in</a></td>
+            </tr>
+        </table>
+    
+        <script>
+            function check() {
+            var pass_1 = document.forms["form"]["password"].value;
+            var pass_2 = document.forms["form"]["password2"].value;
+                if(pass_1 != pass_2){
+                    alert("password tidak sama!");
+                    return false;
+                }
+
+            var telp = document.forms["form"]["telp"].value;
+            if(!telp.match(/^\d+/)) {
+                alert("nomor telpon tidak valid!")
+            }
+
+                var letter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (letter.test(myForm.emailAddr.value)){
+                    return (true)
+                }
+                alert("email tidak valid!")
+                return (false)
+            }
+        </script>
+
+    </form>
+    </div>
+
+</body>
+</html>
