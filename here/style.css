@@ -1,0 +1,207 @@
+* { box-sizing: grid; }
+body {margin: 0;}
+.navbar {
+    background-color: #fce484;
+    overflow: hidden;
+    min-width: 100%;
+    position:fixed;
+}
+.navbar a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center; 
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar a:last-child {display: none;}
+.home {
+    padding: 50px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+h2 {
+    font: 30px verdana;
+    text-align: center;
+    text-decoration: underline;
+    margin: 50px 0 30px 0;
+}
+.clear {
+    clear: both;
+}
+.snack {
+    float: left;
+    width: 80%;
+}
+.footer {
+    background-color: #fce484;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+.footer h3 {
+    font-family: segoe ui;
+}
+.footer ul {
+    padding: 0;
+    margin: 15px 0 0 0;
+    height: 100px;
+    list-style: none;
+}
+.footer ul li {
+    padding: 10px;
+}
+.footer ul li a {
+    color: darkblue;
+    text-decoration: none;
+}
+.footer img {
+    width: 15px;
+    height: auto;
+    margin: 0 5px 0 0;
+}
+table {
+    width: 100%;
+}
+.snack_img {
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+    background-color: #fcfc88;
+}
+td:not(:last-child), th, tr {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid darkgrey ;
+}
+.col-5 {
+    font-weight: bold;
+}   
+table tr td#msg {
+    text-align: center;
+    font-family: verdana;
+}
+table tr td img#gofood, table tr td#msg {
+    width: 300px;
+    border: none;
+}
+.order {
+    margin: 15px 0;
+    box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+}
+.order table tr {
+    background-color: whitesmoke;
+    border: none;
+    box-shadow: 0 5px darkslategrey;
+}
+
+/* Handphone */
+@media only screen and (max-width: 768px) {
+.navbar a:not(:first-child) {display: none;}
+.navbar a:last-child {
+    display: block;
+    position: absolute;
+    background-image: url(/webpage/img/ic_more.webp);    right: 0;
+    top: 10px;
+}
+.navbar.res a {
+    float: none;    
+    display: block;
+}
+.card {
+    display: table;
+    background-color: #fce484;
+    width: 100%;
+}
+.card p {
+    padding: 0 30px;
+    text-align: justify;
+    background-color: #fce484;
+    line-height: 1.8;
+}   
+.card h3 {
+    background-color: pink;
+    display: inline-block;
+    font: bold 16px 'segoe ui';
+    padding: 10px;
+    width: 68%;
+}
+h2 {
+    margin: 30px auto;
+}
+h4 {
+    font: arial;
+    padding: 0 15px;
+    margin: 0;
+}
+.snack a:not(:first-child) {
+    display: none;
+}
+.col-1,.col-4,.col-6 {display: none;}
+table tr td#order {
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .col-1,.col-4 {display: table-cell;}
+}
+
+td,th {
+    border: none;
+    padding: 10px;
+    text-align: justify;
+    border: 2px solid darkgrey;
+}
+td p {padding: 15px;}
+tr {
+    border-collapse: collapse;
+    border: 1px solid darkgrey
+}
+}
+
+
+/* Tablet - Laptop */
+@media only screen and (min-width: 769px) {
+    .card {
+        display: table;
+        float: left;
+        max-width: 25%;
+        height: 300px;
+        background-color: #fce484;
+        padding: 15px;
+        overflow: auto;
+        box-shadow: 5px 10px #808080;
+    }
+    .card:nth-child(2) {
+        margin: 0 0 0 5%;
+    }
+    .card:nth-child(3) {
+        background-color: pink;
+        margin: 0 2.5%;
+    }
+    .card:nth-child(4) {
+        margin: 0;
+    }
+    .card p, table p {
+        line-height: 1.8;
+    }
+    .card h3, .snack_panel h3 {
+        background-color: pink;
+        display: inline-block;
+        font: bold 16px 'segoe ui';
+        padding: 10px;
+        width: 100%;
+    }
+    .card.middle h3 {
+        background-color: #fce484;
+    }
+    .col-6 {display: table-cell;}
+/* Effects */
+
+}
